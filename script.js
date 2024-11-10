@@ -76,6 +76,9 @@ function loadFailures() {
         `;
         tableBody.appendChild(row);
     });
+
+    // Scroll to the bottom of the table to show the latest log
+    tableBody.scrollTop = tableBody.scrollHeight;
 }
 
 // Confirm deletion of a failure log
