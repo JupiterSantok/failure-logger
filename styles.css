@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input, form select, form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  button#exportExcel {
+    padding: 10px 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  button#exportExcel:hover {
+    background-color: #1976D2;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: x-small;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    font-size: medium;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button.delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  td.comment {
+    word-wrap: break-word;  /* Ensures comments wrap within the cell */
+    max-width: 200px;  /* Limit the width of the comment cell */
+  }
+  
+  /* Highlight matched text */
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  
+  /* Hide rows that don't match the search criteria */
+  .hidden {
+    display: none;
+  }
+  /* Adjust the size of the search box */
+  
+  #searchFilter {
+      width: 250px;         /* Set the width to 50px */
+      height: 35px;        /* Set the height to 10px */
+      padding: 5px;        /* Add some padding for better appearance */
+      margin-bottom: 20px; /* Maintain spacing between search and table */
+      border: 1px solid #ddd;
+      background: #ddd;
+      border-radius: 25px;
+      font-size: 12px;     /* Adjust font size for smaller box */
+  }
+  
+  /* Existing styles for highlighting and hiding rows remain unchanged... */
+  
