@@ -447,7 +447,7 @@ nav .fas{
   display: none;
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1200px){
   #header{
       background-image: url(./img/Cellphone\ bacround.jpg);
   }
