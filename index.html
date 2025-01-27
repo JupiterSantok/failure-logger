@@ -3,87 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Failure Logger</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="fav icon.png">
-    <!-- Include SheetJS library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d6407544dd.js" crossorigin="anonymous"></script>
+    <title>Personal Website</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
+<div id="header">
     <div class="container">
-        <h1>Failure Logger</h1>
-        
-        <!-- Form for logging failures -->
-        <form id="failureForm">
-            <label for="testerId">Tester ID:</label>
-            <input type="text" id="testerId" name="testerId" required>
-            
-            <label for="mtfBin">MTF Bin:</label>
-            <input type="text" id="mtfBin" name="mtfBin" required>
-            
-            <label for="testName">Test Name:</label>
-            <input type="text" id="testName" name="testName" required>
-            
-            <label for="testNumber">Test Number:</label>
-            <input type="number" id="testNumber" name="testNumber" required>
-    
-            <label for="dietype">Die type:</label>
-            <input type="text" id="dietype" name="dietype" required>
-            
-            <label for="jobReason">Job Reason:</label>
-            <select id="jobReason" name="jobReason" required>
-                <option value="HARDWARE">HARDWARE</option>
-                <option value="CONTACT CLEAN/INSPECT">CONTACT CLEAN/INSPECT</option>
-                <option value="REPLACE SOCKET">REPLACE SOCKET</option>
-                <option value="HANDLER ISSUE">HANDLER ISSUE</option>
-                <option value="POWERCYCLE">POWERCYCLE</option>
-                <option value="LPE">LPE</option>
-                <option value="DYLPS">DYLPS</option>
-                <option value="DYSER">DYSER</option>
-                <option value="TEST PROGRAM">TEST PROGRAM</option>
-                <option value="TEMP PROBLEM">TEMP PROBLEM</option>
-            </select>
-    
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" rows="4"></textarea>
-    
-            <label for="employeeId">Employee ID:</label>
-            <input type="number" id="employeeId" name="employeeId" required>
-    
-            <button type="submit">Log Failure</button>
-        </form>
-    
-        <!-- Button to export to Excel -->
-        <button id="exportExcel" onclick="exportToExcel()">Export to Excel</button>
-    
-        <!-- Search Filter -->
-        <input type="text" id="searchFilter" placeholder="Search ..." onkeyup="filterFailures()">
-    
-        <div class="table-container">
-            <h2>Logged Failures</h2>
-            <table id="failureTable">
-                <thead>
-                    <tr>
-                        <th>Timestamp</th>
-                        <th>Tester ID</th>
-                        <th>MTF Bin</th>
-                        <th>Test Name</th>
-                        <th>Test Number</th>
-                        <th>Die type</th>
-                        <th>Job Reason</th>
-                        <th>Comment</th>
-                        <th>Employee ID</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Logged data will appear here -->
-                </tbody>
-            </table>
+        <nav>
+            <img src="img/LOGO v1.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Never Stop</p>
+            <h1>EXPLORING</h1>
+            <p>Explore stunning views and peaceful moments in nature.</p>
         </div>
     </div>
-    
+</div>
+<!-- -----------about---------- -->
 
-    <script src="script.js"></script>
+<!-- -----------events---------- -->
+ <div id="events">
+    <div class="container">
+        <h1 class="sub-title">Events</h1>
+        <div class="events-list">
+            <div>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Graduation </h2>
+                <p>2023</p>
+                <a href="events.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-cake-candles"></i>
+                <h2>Birthday Celebration</h2>
+                <p>August 31, 2020</p>
+                <a href="events.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <h2>Family Reunion</h2>
+                <p>2023</p>
+                <a href="events.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <h2>First Job</h2>
+                <p>October 14, 2022</p>
+                <a href="events.html">learn more</a>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-- -----------gallery---------- -->
+  <div id="gallery">
+    <div class="container">
+        <h1 class="sub-title">Albums</h1>
+        <div class="albums-list">
+            <div class="album">
+                <img src="./gallery/Mangrove planting1.jpg" alt="">
+                <div class="layer">
+                    <h3>Mangrove Planting</h3>
+                    <p><span><i class="fa-solid fa-location-dot"></i></span>March 19, 2023</p>
+                    <p><span><i class="fa-solid fa-calendar-days"></i></span>March 19, 2023</p>
+                    <a href="mangrove.html"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+            <div class="album">
+                <img src="./gallery/Gulugod baboy front.jpg" alt="">
+                <div class="layer">
+                    <h3>Mt. Gulugod Baboy Adventure</h3>
+            
+                    <p><span><i class="fa-solid fa-location-dot"></i></span> Ligaya, Mabini, Batangas</p>
+                    <p><span><i class="fa-solid fa-calendar-days"></i></span>March 20, 2023</p>
+                    <a href="gulugodbaboy.html"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+            <div class="album">
+                <img src="./azure/azure front.jpg" alt="">
+                <div class="layer">
+                    <h3>Azure Urban Resort Residences</h3>
+                    <p><span><i class="fa-solid fa-location-dot"></i></span>Marcelo Green, Bicutan Parañaque</p>
+                    <p><span><i class="fa-solid fa-calendar-days"></i></span>Janury 3, 2024</p>
+                    <a href="azure.html"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="albums-list">
+            <div class="album">
+                <img src="./gallery/Mangrove planting1.jpg" alt="">
+                <div class="layer">
+                    <h3>Mangrove Planting</h3>
+                    <p>March 19, 2023</p>
+                    <a href="mangrove.html"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+            <div class="album">
+                <img src="./gallery/Gulugod baboy1.jpg" alt="">
+                <div class="layer">
+                    <h3>Mt. Gulugod Baboy Adventure</h3>
+                    <p>March 20, 2023</p>
+                    <a href="gulugodbaboy.html"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+            <div class="album">
+                <img src="./gallery/Mangrove planting1.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>kjhwnrevoiwkruhuiwe</p>
+                    <a href="#"><i class="fa-solid fa-image"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+  <!-- -----------contact---------- -->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="santok.jupiter@gmail.com;"><i class="fa-solid fa-envelope"></i></i></a>santok.jupiter@gmail.com</p>
+                <p><i class="#"><i class="fa-solid fa-phone"></i></i></a>09630059742</p>
+                <dib class="social-icons">
+                    <a href="https://www.facebook.com/jupiterogma.santok?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://join.skype.com/invite/ukrNdjxG0xoF"><i class="fa-brands fa-skype"></i></a>
+                    <a href="https://www.linkedin.com/in/jupiter-santok-4308a52b1/"><i class="fa-brands fa-linkedin"></i></a></a>
+                    <a href="https://www.instagram.com/jupiter_santok/"><i class="fa-brands fa-instagram"></i></a></a>
+                </dib>
+                
+            </div>
+            <div class="contact-right">
+                <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbwH6IOG4as6j5mHca1D7NXX-KLGkKEHJrRnw5nfU5otMOUQRCKGNrIfq29ybg8fiv_k/exec">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> © Jupiter 2025❤</p>
+    </div>
+   </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+</script>   
 </body>
 </html>

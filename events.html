@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6407544dd.js" crossorigin="anonymous"></script>
+    <title>Personal Website</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .error-message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .error-code {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #f5c6cb;
+            color: #721c24;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+        .back-button:hover {
+            background-color: #e2a3a5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="error-title">Access Denied</div>
+        <div class="error-code">403</div>
+        <div class="error-message">Sorry, you are not allowed to access this page.</div>
+        <a href="javascript:history.back()" class="back-button">Go Back</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6407544dd.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;           
+            overflow: hidden;        
+            transition: background-color 0.3s ease;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: animate 30s linear infinite;
+            place-items: center;
+            margin-left: 110px;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+        }
+
+        .box span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .text {
+            position: absolute;
+            place-items: center;
+            color: rgb(250, 0, 0);
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            z-index: 2; 
+            margin-top: 410px;
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+            text-shadow: 
+            0.1px 0.1px #808080,
+            0.2px 0.2px #808080,
+            0.3px 0.3px #808080,
+            0.4px 0.4px #808080,
+            0.5px 0.5px #808080,
+            0.6px 0.6px #808080,
+            0.7px 0.7px #808080,
+            0.8px 0.8px #808080,
+            0.9px 0.9px #808080,
+            1px 1px #808080;
+        }
+
+        .icon1{
+            position: absolute;
+            color: #002635;
+            place-items: center;
+            font-size: 27px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            z-index: 2; 
+            margin-top: 400px;
+            margin-right: 420px;
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+        }
+        .icon1:hover{
+            color: #000;
+            transform: scale(1.3);
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .back-button {
+            background-color: #f1c40f;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            width: 150px;
+            margin-top: 550px;
+        }
+
+        .back-button:hover {
+            background-color: #e0b106;
+        }
+
+        .box1 {
+            place-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box">
+            <span style="--i:1;"><img src="./azure/azure2.jpg" alt="Image 1"></span>
+            <span style="--i:2;"><img src="./azure/azure3.jpg" alt="Image 2"></span>
+            <span style="--i:3;"><img src="./azure/azure4.jpg" alt="Image 3"></span>
+            <span style="--i:4;"><img src="./azure/azure5.jpg" alt="Image 4"></span>
+            <span style="--i:5;"><img src="./azure/azure6.jpg" alt="Image 5"></span>
+            <span style="--i:6;"><img src="./azure/azure7.jpg" alt="Image 6"></span>
+            <span style="--i:7;"><img src="./azure/azure8.jpg" alt="Image 7"></span>
+            <span style="--i:8;"><img src="./azure/azure9.jpg" alt="Image 8"></span>
+        </div>
+    </div>
+    <div class="text">Azure Urban Resort Residences</div>
+    <div class="icon1">
+        <a href="https://www.bing.com/maps?q=azure+urban+resort&FORM=HDRSC6&cp=14.493267%7E121.040599&lvl=15.3" target="_blank">
+            <i class="fa-solid fa-hotel"></i>
+        </a>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <div id="myModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Clicked Image">
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        const images = document.querySelectorAll('.box span img');
+        const modal = document.getElementById('myModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        const text = document.querySelector('.text');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = "flex";  
+                modalImage.src = image.src;   
+                text.style.display = "none";   
+                document.body.style.backgroundColor = "transparent"; 
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";  
+            text.style.display = "block";  
+            document.body.style.backgroundColor = "#f8d7da"; 
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";  
+                text.style.display = "block";  
+                document.body.style.backgroundColor = "#f8d7da"; 
+            }
+        });
+    </script>
+
+</body>
+</html>
