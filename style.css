@@ -327,12 +327,14 @@ br{
     flex-basis: 35%;
 }
 
+
 .contact-right{
     flex-basis: 60%;
 }
 
 .contact-left p{
     margin-top: 30px;
+
 
 }
 
@@ -446,7 +448,7 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 1500px){
+@media only screen and (max-width: 1200px){
     #header{
         background-image: url(./img/Cellphone\ bacround.jpg);
     }
@@ -580,14 +582,10 @@ nav .fas{
     }
 
     .copyright{
-        font-size: 22px;
+        font-size: 50px;
     }
-    .contact-left{
-        flex-basis: 35%;
-    }
-    
-    .contact-right{
-        flex-basis: 60%;
+    .contact-left .contact-right{
+        flex-basis: 100%;
     }
     
     .contact-left p{
@@ -596,8 +594,14 @@ nav .fas{
     }
     
     .contact-left p i{
-        margin-right: 25px;
-        font-size: 50px;
+        
+        font-size: 30px;
+
+    }
+    .contact-left p{
+        font-size: 30px;
+    
+    
     }
     
     .social-icons{
@@ -605,7 +609,7 @@ nav .fas{
     }
     
     .social-icons a{
-        font-size: 50px;
+        font-size: 0px;
         margin-right: 15px;
         margin-top: 15px;
     }
@@ -634,14 +638,18 @@ nav .fas{
         font-size: 22px;
         border-radius: 6px;
     }
-    
-    form .btn2{
+    .btn{
+        font-size: 30px;
+    }
+    form .btn2 {
         padding: 14px;
         font-size: 50px;
         margin: 20px;
         cursor: pointer;
+        width: 190px;
     }
     
 
 }
+
 
