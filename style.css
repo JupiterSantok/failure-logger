@@ -460,27 +460,34 @@ nav .fas{
         font-size: 50px;
     }
 
+
     nav .fas{
         display: block;
         font-size: 50px;
         margin-top: 75px;
+        cursor: pointer;
     }
 
     nav ul{
-        background: linear-gradient(rgba(0, 0, 0),  rgb(255, 0, 0, 0.5));
+        background: linear-gradient(rgba(0, 0, 0),  rgb(255, 0, 0, 0.9));
         position: fixed;
         top: 0;
-        right: -500px;
-        width: 200px;
+        right: -600px;
+        width: 600px;
         height: 100vh;
         padding-top: 180px;
         z-index: 2;
         transition: right 0.5s;
+        font-size: 70px;
+        
+        
     }
 
     nav ul li{
         display: block;
         margin: 25px;
+        font-size: 70px;
+        color: #ff004f;
     }
 
     nav ul .fas{
