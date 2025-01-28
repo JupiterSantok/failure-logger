@@ -73,7 +73,7 @@
                 <img src="./gallery/Mangrove planting1.jpg" alt="">
                 <div class="layer">
                     <h3>Mangrove Planting</h3>
-                    <p><span><i class="fa-solid fa-location-dot"></i></span>Kawit Cavite</p>
+                    <p><span><i class="fa-solid fa-location-dot"></i></span>March 19, 2023</p>
                     <p><span><i class="fa-solid fa-calendar-days"></i></span>March 19, 2023</p>
                     <a href="mangrove.html"><i class="fa-solid fa-image"></i></i></a>
                 </div>
@@ -172,7 +172,12 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
+    var sidemenu = document.getElementById("sidemenu");
+
 </script>
+
+<!-- -----------sidemenu for small screen---------- -->
+
 <script>
 var sidemenu = document.getElementById("sidemenu");
 
@@ -180,8 +185,17 @@ function openmenu(){
     sidemenu.style.right = "0";
 }
 function closemenu(){
-    sidemenu.style.right = "-200px";
+    sidemenu.style.right = "-700px";
 }
+
+document.addEventListener('click', function(event) {
+    var isClickInside = sidemenu.contains(event.target) || document.querySelector('.fas.fa-bars').contains(event.target);
+    
+    if (!isClickInside) {
+        closemenu();
+    }
+});
+
 </script>   
 </body>
 </html>
